@@ -11965,4 +11965,29 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #014421;
+}
+
+.navbar .nav-link:hover {
+  color: #014421;
+}
+
+.nav-item.text-primary a {
+  color: #014421 !important;
+}
+
+.nav-item.text-primary button {
+  color: #014421 !important;
+}
+
+footer.footer {
+  font-size: 14px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
 }/*# sourceMappingURL=main.css.map */
