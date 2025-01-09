@@ -11990,4 +11990,21 @@ footer.footer {
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+}
+
+.image2-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text4-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=main.css.map */
