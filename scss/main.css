@@ -11984,6 +11984,9 @@ textarea.form-control-lg {
 }
 
 footer.footer {
+  height: 50px;
+  width: 100%;
+  padding: 5px 15px;
   font-size: 14px;
 }
 
@@ -11992,19 +11995,31 @@ p {
   font-size: 18px;
 }
 
-.image2-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.text-justify {
+  text-align: justify;
 }
 
-.text4-container {
+.search-bar {
+  max-width: 900px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  margin: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  border: none;
+  box-shadow: none;
+}
+
+.separator {
+  color: #ccc;
+  padding: 0 10px;
+}
+
+.btn-primary {
+  background-color: #014421;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #016c34;
 }/*# sourceMappingURL=main.css.map */

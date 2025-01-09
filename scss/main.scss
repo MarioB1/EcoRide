@@ -36,3 +36,28 @@ p {
 .text-justify{
   text-align: justify;
 }
+
+.search-bar {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+}
+
+.form-control {
+  border: none;
+  box-shadow: none;
+}
+
+.separator {
+  color: #ccc;
+  padding: 0 10px;
+}
+
+.btn-primary {
+  background-color: #014421;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #016c34;
+}
