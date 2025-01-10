@@ -12022,4 +12022,12 @@ p {
 
 .btn-primary:hover {
   background-color: #016c34;
+}
+
+.mb-3 {
+  border: 1px solid #014421; /* Couleur et style de la bordure */
+  border-radius: 5px; /* Arrondir les coins pour un aspect plus esthétique */
+  padding: 10px; /* Ajouter un espace intérieur */
+  margin-bottom: 10px; /* Espacement entre les champs */
+  background-color: #f9f9f9; /* Optionnel : Couleur de fond légère */
 }/*# sourceMappingURL=main.css.map */
