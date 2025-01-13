@@ -12025,9 +12025,9 @@ p {
 }
 
 .mb-3 {
-  border: 1px solid #014421; /* Couleur et style de la bordure */
-  border-radius: 5px; /* Arrondir les coins pour un aspect plus esthétique */
-  padding: 10px; /* Ajouter un espace intérieur */
-  margin-bottom: 10px; /* Espacement entre les champs */
-  background-color: #f9f9f9; /* Optionnel : Couleur de fond légère */
+  border: 1px solid #014421;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
 }/*# sourceMappingURL=main.css.map */
