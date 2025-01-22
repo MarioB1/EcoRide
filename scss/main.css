@@ -12030,4 +12030,45 @@ p {
   padding: 10px;
   margin-bottom: 10px;
   background-color: #f9f9f9;
+}
+
+/* Utilisation de flexbox pour mettre les cards côte à côte */
+.d-flex {
+  display: flex;
+  justify-content: space-between; /* Crée de l'espace entre les éléments */
+  align-items: center;
+  width: 100%; /* Assure que les cards occupent toute la largeur disponible */
+}
+
+/* Ajout d'une marge pour espacer les cards */
+.card {
+  margin: 0 10px; /* Ajoute de l'espace horizontal entre les cards */
+}
+
+/* Pour la gestion des images de profil */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#preferences i {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#preferences i:hover {
+  color: #014421;
+}
+
+.card {
+  margin: 200px;
 }/*# sourceMappingURL=main.css.map */
