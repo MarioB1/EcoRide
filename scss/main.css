@@ -12047,8 +12047,8 @@ p {
 
 /* Pour la gestion des images de profil */
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
 }
 
