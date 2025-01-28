@@ -1,135 +1,129 @@
-<section>
+
+
+<body>
+
+  <!-- Section d'Image d'accueil -->
+  <section>
     <article>
-
-        <img src="../images/image acceuil .jpg" class="w-100" style="  width: 800px; object-fit: cover;
-
-            height: 450px; " />
+      <img src="../images/image acceuil .jpg" class="w-100" style="object-fit: cover; height: 450px;" alt="Image d'accueil" />
     </article>
-    <section class="search-bar-section">
-        <div class="container">
-          <div class="search-bar bg-white p-3 rounded shadow-lg">
-            <form class="row g-0 align-items-center">
-              <div class="col-md d-flex align-items-center">
-                <i class="bi bi-geo-alt"></i>
-                <input type="text" class="form-control border-end-0" placeholder="Départ" name="depart">
-              </div>
-      
-              <div class="col-auto">
-                <span class="separator">|</span>
-              </div>
-      
-              <div class="col-md d-flex align-items-center">
-                <i class="bi bi-geo-alt"></i>
-                <input type="text" class="form-control border-start-0 border-end-0" placeholder="Destination" name="destination">
-              </div>
-      
-              <div class="col-auto">
-                <span class="separator">|</span>
-              </div>
-    
-              <div class="col-md">
-                <input type="date" class="form-control border-start-0 border-end-0" name="date" value="2025-01-14">
-              </div>
-      
-              <div class="col-auto">
-                <span class="separator">|</span>
-              </div>
-      
-              <div class="col-md d-flex align-items-center">
-                <i class="bi bi-people me-2"></i>
-                <select class="form-control border-start-0 border-end-0" name="passager">
-                  <option value="1">1 Passager</option>
-                  <option value="2">2 Passagers</option>
-                  <option value="3">3 Passagers</option>
-                  <option value="4">4 Passagers</option>
-                </select>
-               
+  </section>
 
-              </div>
-      
-              <div class="col-md">
-                <button type="submit" class="btn btn-primary w-100">Rechercher</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-      
-      </section>
-      
-<br><br>
-<section>
+  <!-- Section barre de Recherche -->
+  <section class="search-bar-section">
     <div class="container">
+      <div class="search-bar bg-white p-3 rounded shadow-lg">
+        <form class="row g-0 align-items-center">
+          
+          <!-- Départ -->
+          <div class="col-md d-flex align-items-center">
+            <i class="bi bi-geo-alt"></i>
+            <input type="text" class="form-control border-end-0" placeholder="Départ" name="depart">
+          </div>
+          
+          <div class="col-auto">
+            <span class="separator">|</span>
+          </div>
 
-        <div class="text-center">
+          <!-- Destination -->
+          <div class="col-md d-flex align-items-center">
+            <i class="bi bi-geo-alt"></i>
+            <input type="text" class="form-control border-start-0 border-end-0" placeholder="Destination" name="destination">
+          </div>
 
-            <div class="row row-cols-1 row-cols-lg-3">
-                <div class="col p-3">
+          <div class="col-auto">
+            <span class="separator">|</span>
+          </div>
+          
+          <!-- Date -->
+          <div class="col-md">
+            <input type="date" class="form-control border-start-0 border-end-0" name="date" value="2025-01-14">
+          </div>
 
-                    <div class="image-card">
-                        <img src="IMAGE" class="rounded w-100" style="  width: 300px;       
-height: 250px; " />
-                        <!-- Insérer une image-->
-                    </div>
+          <div class="col-auto">
+            <span class="separator">|</span>
+          </div>
 
-                    <br><br>
+          <!-- Passagers -->
+          <div class="col-md d-flex align-items-center">
+            <i class="bi bi-people me-2"></i>
+            <select class="form-control border-start-0 border-end-0" name="passager">
+              <option value="1">1 Passager</option>
+              <option value="2">2 Passagers</option>
+              <option value="3">3 Passagers</option>
+              <option value="4">4 Passagers</option>
+            </select>
+          </div>
 
-                    <div class=" text-center" <p>Choisir EcoRide, c’est réduire les émissions de CO2, de diminuer la
-                        pollution et d’économiser du carburant. Une manière simple et efficace de contribuer à un avenir
-                        plus écologique.</p>
-                    </div>
-                </div>
+          <div class="col-md">
+            <button type="submit" class="btn btn-primary w-100">Rechercher</button>
+          </div>
 
+        </form>
+      </div>
+    </div>
+  </section>
+<br><br>
 
-                <div class="col p-3">
-                    <div class="image-card">
-                        <img src="IMAGE" class="rounded w-100" style="  width: 300px;       
-height: 250px; " />
-                        <!-- Insérer une image-->
-                    </div>
-
-                    <br><br>
-
-                    <div class=" text-center" <p>Partagez les frais de trajet, réduisant ainsi le coût du carburant, des
-                        péages et de l'entretien du véhicule. Une solution économique pour voyager à moindre prix.</p>
-                    </div>
-                </div>
-
-                <div class="col p-3">
-                    <div class="image-card">
-                        <img src="IMAGE" class="rounded w-100" style="  width: 300px;       
-height: 250px; " />
-                        <!-- Insérer une image-->
-                    </div>
-
-                    <br><br>
-
-                    <div class=" text-center" <p>Créez des liens humains en permettant de partager des trajets avec
-                        d'autres. C’est l’occasion de rencontrer de nouvelles personnes, de rendre vos déplacements plus
-                        conviviaux et de renforcer la solidarité entre passagers.</p>
-                    </div>
-                </div>
-
-</section>
-<br><br><br>
-<section>
+  <!-- Présentation des valeurs -->
+  <section>
     <article>
-        <div class="container">
-            <div class="row row-cols-2 align-items-center">
-                <div class="col">
-                    <img class="w-100 rounded" src="../images/image acceuil .jpg">
-                </div> 
-                <div class="col">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-                    <div class="text-justify">
-                       <p>Bienvenue sur EcoRide, la plateforme de covoiturage qui combine économies, convivialité et
-                        respect de l'environnement. En partageant vos trajets, vous réduisez votre empreinte carbone
-                        tout en profitant d'une alternative simple et solidaire. Avec EcoRide, voyagez de manière plus
-                        responsable !
-                    </p>
+      <div class="container">
+        <div class="text-center">
+          <div class="row row-cols-1 row-cols-lg-3">
+            <div class="col p-3">
+                <div class="image-card">
+                  <img src="../images/pollution.png" class="rounded" alt="Image" />
                 </div>
+                <div class="text-justify mt-2">
+                <p>Choisir EcoRide, c’est réduire les émissions de CO2, de diminuer la pollution et d’économiser du carburant. Une manière simple et efficace de contribuer à un avenir plus écologique.</p>
+                </div>
+              </div>
+              <div class="col p-3">
+                <div class="image-card">
+                  <img src="../images/money.png" class="rounded" alt="Image" />
+                </div>
+                <div class="text-justify mt-2">
+            <p>Partagez les frais de trajet, réduisant ainsi le coût du carburant, des péages et de l'entretien du véhicule. Une solution économique pour voyager à moindre prix.</p>
+                </div>
+              </div>
+              
+            <div class="col p-3">
+              <div class="image-card">
+                <img src="../images/mains.png" class="rounded" alt="Image" />
+              </div>
+              <div class="text-justify mt-2">
+                <p>Créez des liens humains en permettant de partager des trajets avec d'autres. C’est l’occasion de rencontrer de nouvelles personnes, de rendre vos déplacements plus conviviaux et de renforcer la solidarité entre passagers.</p>
+              </div>
             </div>
+      
+            
+        </div>
+      </div>
+      </div>
+    </article>
+  </section>
+  <br><br>
+  <!-- Géneral -->
+  <section>
+    <article>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 align-items-center">
+          <div class="col">
+            <img src="../images/carsharing.png" class="w-100 rounded" alt="Image">
+          </div>
+  
+          <div class="col">
+            <div class="text-justify">
+              <p>EcoRide vous offre une façon simple, économique et durable de voyager. En partageant vos trajets, vous réduisez vos frais de transport tout en diminuant votre empreinte carbone. Vous faites ainsi un geste concret pour l’environnement tout en rencontrant des personnes partageant les mêmes valeurs.
+
+Rejoindre EcoRide, c’est choisir une alternative solidaire qui vous permet de voyager de manière plus responsable. Profitez des avantages d’un transport collaboratif pour un futur plus vert et plus humain.</p>
+            </div>
+          </div>
         </div>
       </div>
     </article>
-</section>
-<br><br><br>
+  </section>
+  </body>
+
+  
