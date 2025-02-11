@@ -12309,4 +12309,42 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   .profile-card #preferences i {
     font-size: 20px;
   }
+}
+.scroll-container {
+  width: 80%;
+  max-width: 1000px;
+  max-height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.scroll-container .card {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+}
+.scroll-container .card:hover {
+  transform: translateY(-5px);
+}
+.scroll-container .action-image-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
 }/*# sourceMappingURL=main.css.map */

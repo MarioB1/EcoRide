@@ -33,12 +33,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
               <li class="nav-item">
-                <a class="nav-link text-primary" href="/acceuil">Acceuil</a>
+                <a class="nav-link text-primary" href="/home">Accueil</a>
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle text-primary" href="covoiturage" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   Covoiturage
                 </a>
@@ -59,9 +60,27 @@
                 </ul>
               </li>
 
+      
+              
               <li class="nav-item">
                 <a class="nav-link text-primary" href="/contact">Contact</a>
               </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-primary" href="espace employe" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Espace employé
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item text-primary" href="/avis">Avis</a></li>
+                  <li><a class="dropdown-item text-primary" href="/trajets">Trajets</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="/admin">Espace administrateur</a>
+              </li>
+
               <li class="nav-item text-primary" data-show="disconnected">
                 <a class="nav-link" href="/signup">Inscription</a>
               </li>
@@ -70,7 +89,7 @@
               </li>
               
               <li class="nav-item text-primary" data-show="connected">
-                <button class="nav-link btn-link" id="signout-btn">Déconnexion</button>
+                <button class="nav-link" id="signout-btn">Déconnexion</button>
               </li>
             </ul>
           </div>
@@ -90,7 +109,7 @@
   </footer>
 
 
-  <script src="js/script.js"></script>
+  <script src="js/auth/script.js/"></script>
   <script type="module" src="Router/router.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

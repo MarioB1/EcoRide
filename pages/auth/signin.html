@@ -1,5 +1,4 @@
-<section
-  style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #0000;">
+<section style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #0000;">
 
   <div class="container mt-5">
     <!-- Card pour mettre le formulaire dans une boîte -->
@@ -13,6 +12,9 @@
 
             <div class="mb-3">
               <input type="email" class="form-control" id="EmailInput" placeholder="email" name="Email">
+              <div class="invalid-feedback">
+                Le mail et le mot de passe ne correspondent pas
+              </div>
             </div>
             <div class="mb-3">
               <input type="password" class="form-control" id="PasswordInput" placeholder="mot de passe" name="Password">
@@ -22,7 +24,7 @@
             </div>
             <br>
             <div class="text-center">
-              <button type="submit" class="btn btn-primary">Se connecter</button>
+              <button type="button" class="btn btn-primary" id="btnSignin">Se connecter</button>
             </div>
           </form>
           <br>
@@ -34,4 +36,3 @@
     </div>
   </div>
 </section>
-

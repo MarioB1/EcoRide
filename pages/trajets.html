@@ -1,0 +1,58 @@
+<section style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #0000;">
+  <div class="container mt-5">
+
+     
+    <div class="col d-flex justify-content-center align-items-center">
+      <h1 class="text-secondary fw-bold text-center">Trajets signalés</h1>
+  </div>
+  <br>  <br>
+  <div class="col">
+    <div class="scroll-container">
+      <div class="action-image-buttons" data-show="employe">
+
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeleteAvisModal"><i class="bi bi-trash"></i></button>
+      </div>
+
+
+      <div class="scroll-container">
+        <div class="action-image-buttons" data-show="employe">
+          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeleteAvisModal">
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+        <div class="card my-2">
+          <div class="card-header d-flex">
+            <!-- Informations du trajet -->
+            <div class="trip-details">
+              <div class="departure-info">
+                <p><strong>Heure de départ :</strong> 08:30</p>
+                <p><strong>Adresse de départ :</strong> Paris, France</p>
+              </div>
+      
+              <!-- Trait reliant départ à arrivée -->
+              <div class="route-line"></div>
+      
+              <div class="arrival-info">
+                <p><strong>Heure d'arrivée :</strong> 12:00</p>
+                <p><strong>Adresse d'arrivée :</strong> Marseille, France</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <form class="row g-0 align-items-center">
+              <!-- Image du conducteur -->
+              <p class="profile-img me-3">
+                <img src="./images/image-acceuil.jpg" class="rounded-circle" alt="Image de profil">
+              </p>
+              <div class="col-auto">
+                <p>Riko</p>
+              </div>
+              <div class="col-auto">
+                <p class="card-text">2 <i class="bi bi-star-fill"></i></p>
+              </div>
+              <div class="col-auto"></div>
+            </form>
+          </div>
+        </div>
+      
+        
