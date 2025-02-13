@@ -373,7 +373,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  // Une légère ombre pour l'effet "carte"
 
   overflow-y: auto;    // Ajoute la barre de défilement si nécessaire
-}
+
   // Personnalisation de la barre de défilement pour qu'elle soit subtile
   &::-webkit-scrollbar {
     width: 8px;
@@ -387,7 +387,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   &::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
-
+}
   // Pour que les cartes (les avis) soient aussi harmonieuses
   .card {
     margin-bottom: 15px; // Espacement entre les cartes

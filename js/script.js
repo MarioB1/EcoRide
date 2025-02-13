@@ -1,5 +1,5 @@
-const tokenCookieName ="accesstoken";
-const RoleCookieName = "role";
+/*const tokenCookieName ="accesstoken";
+var RoleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn")
 
 signoutBtn.addEventListener("click", signout);
@@ -48,8 +48,6 @@ function eraseCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-const tokenCookieName = "accesstoken";
-
 function setToken(token){
     setCookie(tokenCookieName, token, 7);
 }
@@ -71,10 +69,12 @@ function isConnected(){
 function showAndHideElementsForRoles(){
     const userConnected = isConnected();
     const role = getRole();
+    console.log({userConnected, role})
 
     let allElementsToEdit = document.querySelectorAll('[data-show]');
 
     allElementsToEdit.forEach(element =>{
+        console.log({element})
         switch(element.dataset.show){
             case 'disconnected': 
                 if(userConnected){
@@ -87,20 +87,20 @@ function showAndHideElementsForRoles(){
                 }
                 break;
             case 'admin': 
-                if(!userConnected || role != "admin"){
+                if(!userConnected || role !== "admin"){
                     element.classList.add("d-none");
                 }
                 break;
-            case 'employee': 
-                if(!userConnected || role != "employee"){
+            case 'employe': 
+                if(!userConnected || role !== "employe"){
                     element.classList.add("d-none");
                 }
                 break;
             case 'client': 
-                if(!userConnected || role != "client"){
+                if(!userConnected || role !== "client"){
                     element.classList.add("d-none");
                 }
                 break;
         }
     })
-}
+} 
