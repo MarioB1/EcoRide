@@ -10,4 +10,5 @@ Création d'une plateforme de covoiturage qui facilite les trajets partagés ent
 - SQL >=8.0
 - Symfony CLI
 - Composer
+- PostgreSQL
 
