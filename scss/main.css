@@ -12171,7 +12171,6 @@ section .container .row.row-cols-1.row-cols-md-2.align-items-center .col .text-c
     font-size: 12px;
   }
 }
-/* Autres styles déjà présents */
 /* Images dans les 3 premières colonnes */
 section .container .row.row-cols-1.row-cols-lg-3 .col img {
   width: 100%; /* Garder la largeur à 100% de la colonne */
@@ -12243,7 +12242,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
 .profile-card .d-flex-profile {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .profile-card .profile-img {
@@ -12311,8 +12310,8 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   }
 }
 .scroll-container {
-  width: 80%;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1200px;
   max-height: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -12320,6 +12319,11 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+}
+.scroll-container .card {
+  width: 100%; /* S’étend sur toute la largeur */
+  max-width: none; /* Supprime la restriction */
+  min-height: 150px; /* Assurer une hauteur suffisante */
 }
 .scroll-container::-webkit-scrollbar {
   width: 8px;
@@ -12345,84 +12349,188 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   transform: translateY(-5px);
 }
 
-/* Card de trajet */
-.trip-card {
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+.trajets-container {
+  /* Ligne séparée en 2 avec "Temps de trajet" */
+  /* Première moitié de la ligne */
+  /* Deuxième moitié avec la flèche */
+  /* Flèche à la fin */
+  /* Texte "Temps de trajet" bien centré */
+  /* Styles des cartes */
+  /* Espacement interne des cartes */
+  /* Style de l'espace commentaire */
+  /* Style de l'adresse email */
 }
-
-.trip-card:hover {
+.trajets-container .card-body {
+  display: flex;
+  align-items: center;
+}
+.trajets-container .profile-img {
+  margin-right: 10px; /* Espacement entre l'image et le texte */
+}
+.trajets-container .user-info {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Espace entre le pseudo et la note */
+}
+.trajets-container .user-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.trajets-container .user-rating p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.trajets-container .user-rating i {
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.trajets-container .trip-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+.trajets-container .departure-info p,
+.trajets-container .arrival-info p {
+  font-size: 12px;
+  color: #555;
+  margin: 2px 0;
+  line-height: 1.2;
+}
+.trajets-container .departure-info,
+.trajets-container .arrival-info {
+  width: 20%;
+  text-align: center;
+  position: relative;
+}
+.trajets-container .route-line {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trajets-container .route-line::before {
+  content: "";
+  width: calc(50% - 40px); /* Ajuste pour le texte centré */
+  height: 2px;
+  background-color: #333;
+}
+.trajets-container .route-line::after {
+  content: "";
+  width: calc(50% - 40px);
+  height: 2px;
+  background-color: #333;
+  position: relative;
+}
+.trajets-container .arrival-info::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  border-left: 10px solid #333;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.trajets-container .route-line span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  background-color: white;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.trajets-container .trajets-container .scroll-container {
+  width: 95%; /* Prend plus de place */
+  max-width: 1400px; /* Plus grand pour mieux utiliser l’espace */
+  max-height: 750px;
+}
+.trajets-container .card {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+  padding: 15px;
+}
+.trajets-container .card:hover {
   transform: translateY(-5px);
 }
-
-.card-body {
-  padding: 20px;
+.trajets-container .card-large {
+  flex: 2;
 }
-
-/* Définition du style du conteneur de départ et arrivée */
-.trip-details {
+.trajets-container .card-small {
+  flex: 1;
+  height: auto;
+  min-height: 200px;
+}
+.trajets-container .card-body {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 10px 0;
 }
-
-/* Informations de départ */
-.departure-info p,
-.arrival-info p {
-  font-size: 14px;
+.trajets-container .comment-box {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+.trajets-container .email-info {
+  font-size: 10px;
   color: #333;
-  margin: 5px 0;
+  text-align: center;
 }
-
-.departure-info strong,
-.arrival-info strong {
-  font-weight: bold;
-}
-
-/* Ligne qui relie le point de départ au point d'arrivée */
-.route-line {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 2px;
-  width: 80%;
-  background-color: #ccc;
-  z-index: -1; /* Placer la ligne derrière les informations */
-}
-
-/* Ajuster la disposition des informations du trajet (départ et arrivée) */
-.trip-details .departure-info,
-.trip-details .arrival-info {
-  width: 45%;
-}
-
-/* Image du conducteur */
-.profile-img img {
-  width: 50px;
-  height: 50px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-}
-
-/* Style du nom du conducteur et des étoiles */
-.card-text {
+.trajets-container .scroll-container {
   display: flex;
-  align-items: center;
+  gap: 15px;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
-
-.card-text i {
-  color: gold;
-  margin-left: 5px;
+.trajets-container .card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  flex-grow: 1;
 }
-
-/* Ajout d'un petit effet de survol sur les cartes */
-.card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.trajets-container .card:hover {
+  transform: translateY(-5px);
+}
+.trajets-container .card-trajet {
+  flex: 2;
+  min-width: 300px;
+}
+.trajets-container .card-commentaire, .trajets-container .card-email {
+  flex: 1;
+  min-width: 200px;
+}
+.trajets-container .side-cards {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+}
+.trajets-container .card-email {
+  font-size: 12px;
+}
+.trajets-container .card-email .card-body p {
+  font-size: 10px;
+}
+.trajets-container .card-commentaire {
+  font-size: 12px;
 }/*# sourceMappingURL=main.css.map */

@@ -216,7 +216,6 @@ section .container .row.row-cols-1.row-cols-md-2.align-items-center .col .text-c
   }
 }
 
-/* Autres styles déjà présents */
 
 /* Images dans les 3 premières colonnes */
 section .container .row.row-cols-1.row-cols-lg-3 .col img {
@@ -289,7 +288,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
 .profile-card .d-flex-profile {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .profile-card .profile-img {
@@ -362,18 +361,27 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     font-size: 20px;
   }
 } 
-.scroll-container {
-  width: 80%;          // Limite la largeur à 80% de l'écran, ajustez selon vos besoins
-  max-width: 1000px;   // Vous pouvez ajouter une largeur max pour ne pas aller trop grand
+ // fin de la page mon compte
+
+ // debut page avis
+
+  .scroll-container {
+  width: 100%;          // Limite la largeur à 80% de l'écran, ajustez selon vos besoins
+  max-width: 1200px;   // Vous pouvez ajouter une largeur max pour ne pas aller trop grand
   max-height: 500px;   // Limite la hauteur pour qu'elle soit bien visible et contenue
   margin: 0 auto;      // Centrer le conteneur horizontalement
   padding: 20px;       // Un peu de padding pour aérer le contenu
   background-color: #f8f9fa; // Couleur de fond claire pour un contraste agréable
   border-radius: 8px;  // Coins arrondis pour un look moderne
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  // Une légère ombre pour l'effet "carte"
-
   overflow-y: auto;    // Ajoute la barre de défilement si nécessaire
 
+  
+  .card {
+    width: 100%; /* S’étend sur toute la largeur */
+    max-width: none; /* Supprime la restriction */
+    min-height: 150px; /* Assurer une hauteur suffisante */
+  }
   // Personnalisation de la barre de défilement pour qu'elle soit subtile
   &::-webkit-scrollbar {
     width: 8px;
@@ -402,82 +410,230 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     transform: translateY(-5px);  // Effet de survol pour les cartes
   }
 
-  /* Card de trajet */
-.trip-card {
-  margin-bottom: 20px;
+  
+ // debut page trajet
+  .trajets-container {
+    .card-body {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-img {
+    margin-right: 10px; /* Espacement entre l'image et le texte */
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espace entre le pseudo et la note */
+  }
+  
+  .user-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+  }
+  
+  .user-rating p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-rating i {
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  
+  .trip-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+  }
+  
+  .departure-info p,
+  .arrival-info p {
+    font-size: 12px;
+    color: #555;
+    margin: 2px 0;
+    line-height: 1.2;
+  }
+  
+  .departure-info,
+  .arrival-info {
+    width: 20%;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Ligne séparée en 2 avec "Temps de trajet" */
+  .route-line {
+    position: relative;
+    width: 60%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Première moitié de la ligne */
+  .route-line::before {
+    content: '';
+    width: calc(50% - 40px); /* Ajuste pour le texte centré */
+    height: 2px;
+    background-color: #333;
+  }
+  
+  /* Deuxième moitié avec la flèche */
+  .route-line::after {
+    content: '';
+    width: calc(50% - 40px);
+    height: 2px;
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Flèche à la fin */
+  .arrival-info::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border-left: 10px solid #333;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  
+  /* Texte "Temps de trajet" bien centré */
+  .route-line span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    background-color: white;
+    padding: 2px 8px;
+    white-space: nowrap;
+  }
+
+  .trajets-container .scroll-container {
+    width: 95%; /* Prend plus de place */
+    max-width: 1400px; /* Plus grand pour mieux utiliser l’espace */
+    max-height: 750px;
+  }
+
+/* Styles des cartes */
+.card {
+  flex: 1;
   border: 1px solid #ddd;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease-in-out;
+  padding: 15px;
 }
 
-.trip-card:hover {
+.card:hover {
   transform: translateY(-5px);
 }
 
+.card-large {
+  flex: 2;
+}
+
+.card-small {
+  flex: 1;
+  height: auto;
+  min-height: 200px;
+}
+
+/* Espacement interne des cartes */
 .card-body {
-  padding: 20px;
-}
-/* Définition du style du conteneur de départ et arrivée */
-.trip-details {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 10px 0;
 }
 
-/* Informations de départ */
-.departure-info p,
-.arrival-info p {
-  font-size: 14px;
+/* Style de l'espace commentaire */
+.comment-box {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+/* Style de l'adresse email */
+.email-info {
+  font-size: 10px;
   color: #333;
-  margin: 5px 0;
+  text-align: center;
 }
 
-.departure-info strong,
-.arrival-info strong {
-  font-weight: bold;
-}
 
-/* Ligne qui relie le point de départ au point d'arrivée */
-.route-line {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 2px;
-  width: 80%;
-  background-color: #ccc;
-  z-index: -1; /* Placer la ligne derrière les informations */
-}
+  .scroll-container {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-/* Ajuster la disposition des informations du trajet (départ et arrivée) */
-.trip-details .departure-info,
-.trip-details .arrival-info {
-  width: 45%;
-}
+  .card {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    flex-grow: 1;
+  }
 
-/* Image du conducteur */
-.profile-img img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-}
 
-/* Style du nom du conducteur et des étoiles */
-.card-text {
-  display: flex;
-  align-items: center;
-}
-
-.card-text i {
-  color: gold;
-  margin-left: 5px;
-}
-
-/* Ajout d'un petit effet de survol sur les cartes */
 .card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
 }
+
+.card-trajet {
+  flex: 2; // Plus grande (2x la taille des autres)
+  min-width: 300px;
+}
+
+
+.card-commentaire, .card-email {
+  flex: 1; // Moitié de la taille de "card-trajet"
+  min-width: 200px;
+}
+
+.side-cards {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+}
+
+.card-email {
+  font-size: 12px; // Réduction de la taille du texte
+}
+
+.card-email .card-body p {
+  font-size: 10px; // Encore plus petit pour les adresses email
+}
+
+.card-commentaire {
+  font-size: 12px; // Réduction de la taille du texte
+}
+
+}
+
+
+// control/ raccourcie @import pour separer les fichier main.scss (a verifier)
