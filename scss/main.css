@@ -12450,7 +12450,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   padding: 2px 8px;
   white-space: nowrap;
 }
-.trajets-container .trajets-container .scroll-container {
+.trajet-page .trajets-container .scroll-container {
   width: 95%; /* Prend plus de place */
   max-width: 1400px; /* Plus grand pour mieux utiliser l’espace */
   max-height: 750px;
@@ -12493,7 +12493,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   color: #333;
   text-align: center;
 }
-.trajets-container .scroll-container {
+.trajet-page .trajets-container .scroll-container {
   display: flex;
   gap: 15px;
   align-items: stretch;
@@ -12501,7 +12501,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   width: 100%;
   margin: 0 auto;
 }
-.trajets-container .card {
+.trajet-page .trajets-container .card {
   padding: 20px;
   border-radius: 8px;
   background-color: white;
@@ -12509,28 +12509,28 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   transition: transform 0.3s ease-in-out;
   flex-grow: 1;
 }
-.trajets-container .card:hover {
+.trajet-page .trajets-container .card:hover {
   transform: translateY(-5px);
 }
-.trajets-container .card-trajet {
+.trajet-page .trajets-container .card-trajet {
   flex: 2;
   min-width: 300px;
 }
-.trajets-container .card-commentaire, .trajets-container .card-email {
+.trajet-page .trajets-container .card-commentaire, .trajet-page .trajets-container .card-email {
   flex: 1;
   min-width: 200px;
 }
-.trajets-container .side-cards {
+.trajet-page .trajets-container .side-cards {
   display: flex;
   gap: 15px;
   flex: 1;
 }
-.trajets-container .card-email {
+.trajet-page .trajets-container .card-email {
   font-size: 12px;
 }
-.trajets-container .card-email .card-body p {
+.trajet-page .trajets-container .card-email .card-body p {
   font-size: 10px;
 }
-.trajets-container .card-commentaire {
+.trajet-page .trajets-container .card-commentaire {
   font-size: 12px;
 }/*# sourceMappingURL=main.css.map */

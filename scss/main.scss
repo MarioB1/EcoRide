@@ -375,7 +375,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   border-radius: 8px;  // Coins arrondis pour un look moderne
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  // Une légère ombre pour l'effet "carte"
   overflow-y: auto;    // Ajoute la barre de défilement si nécessaire
-
+  }
   
   .card {
     width: 100%; /* S’étend sur toute la largeur */
@@ -395,7 +395,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   &::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
-}
+
   // Pour que les cartes (les avis) soient aussi harmonieuses
   .card {
     margin-bottom: 15px; // Espacement entre les cartes
@@ -525,7 +525,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     white-space: nowrap;
   }
 
-  .trajets-container .scroll-container {
+ .scroll-container {
     width: 95%; /* Prend plus de place */
     max-width: 1400px; /* Plus grand pour mieux utiliser l’espace */
     max-height: 750px;
@@ -579,6 +579,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   color: #333;
   text-align: center;
 }
+
 
 
   .scroll-container {
