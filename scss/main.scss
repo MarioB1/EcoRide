@@ -364,9 +364,9 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
  // fin de la page mon compte
 
  // debut page avis
-
+.avis-container {
   .scroll-container {
-  width: 100%;          // Limite la largeur à 80% de l'écran, ajustez selon vos besoins
+  width: 100vw;          // Limite la largeur à 80% de l'écran, ajustez selon vos besoins
   max-width: 1200px;   // Vous pouvez ajouter une largeur max pour ne pas aller trop grand
   max-height: 500px;   // Limite la hauteur pour qu'elle soit bien visible et contenue
   margin: 0 auto;      // Centrer le conteneur horizontalement
@@ -375,14 +375,6 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   border-radius: 8px;  // Coins arrondis pour un look moderne
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  // Une légère ombre pour l'effet "carte"
   overflow-y: auto;    // Ajoute la barre de défilement si nécessaire
-  }
-  
-  .card {
-    width: 100%; /* S’étend sur toute la largeur */
-    max-width: none; /* Supprime la restriction */
-    min-height: 150px; /* Assurer une hauteur suffisante */
-  }
-  // Personnalisation de la barre de défilement pour qu'elle soit subtile
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -395,6 +387,14 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   &::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
+  }
+  
+  .card {
+    width: 100%; /* S’étend sur toute la largeur */
+    max-width: none; /* Supprime la restriction */
+    min-height: 150px; /* Assurer une hauteur suffisante */
+  }
+  // Personnalisation de la barre de défilement pour qu'elle soit subtile
 
   // Pour que les cartes (les avis) soient aussi harmonieuses
   .card {
@@ -409,31 +409,35 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   .card:hover {
     transform: translateY(-5px);  // Effet de survol pour les cartes
   }
-
+}
   
  // debut page trajet
-  .trajets-container {
-    .card-body {
+  .trajets-container, 
+.vue-page {
+
+
+  /* Conteneur de la carte */
+  .card-body {
     display: flex;
     align-items: center;
   }
-  
+
   .profile-img {
     margin-right: 10px; /* Espacement entre l'image et le texte */
   }
-  
+
   .user-info {
     display: flex;
     align-items: center;
     gap: 30px; /* Espace entre le pseudo et la note */
   }
-  
+
   .user-rating {
     display: flex;
     align-items: center;
     gap: 5px; 
   }
-  
+
   .user-rating p {
     margin: 0;
     font-size: 16px;
@@ -441,17 +445,15 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     display: flex;
     align-items: center;
   }
-  
+
   .user-rating i {
     font-size: 16px;
     line-height: 1;
     display: flex;
     align-items: center;
   }
-  
-  
-  
-  
+
+  /* Détails du trajet */
   .trip-details {
     display: flex;
     align-items: center;
@@ -460,7 +462,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     padding: 20px 0;
     position: relative;
   }
-  
+
   .departure-info p,
   .arrival-info p {
     font-size: 12px;
@@ -468,15 +470,15 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     margin: 2px 0;
     line-height: 1.2;
   }
-  
+
   .departure-info,
   .arrival-info {
     width: 20%;
     text-align: center;
     position: relative;
   }
-  
-  /* Ligne séparée en 2 avec "Temps de trajet" */
+
+  /* Ligne avec durée de trajet */
   .route-line {
     position: relative;
     width: 60%;
@@ -485,16 +487,14 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     align-items: center;
     justify-content: space-between;
   }
-  
-  /* Première moitié de la ligne */
+
   .route-line::before {
     content: '';
-    width: calc(50% - 40px); /* Ajuste pour le texte centré */
+    width: calc(50% - 40px); /* Ajuste pour centrer le texte */
     height: 2px;
     background-color: #333;
   }
-  
-  /* Deuxième moitié avec la flèche */
+
   .route-line::after {
     content: '';
     width: calc(50% - 40px);
@@ -502,7 +502,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     background-color: #333;
     position: relative;
   }
-  
+
   /* Flèche à la fin */
   .arrival-info::before {
     content: '';
@@ -514,8 +514,8 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
   }
-  
-  /* Texte "Temps de trajet" bien centré */
+
+  /* Durée du trajet centrée */
   .route-line span {
     font-size: 12px;
     font-weight: bold;
@@ -525,116 +525,80 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     white-space: nowrap;
   }
 
- .scroll-container {
-    width: 95%; /* Prend plus de place */
-    max-width: 1400px; /* Plus grand pour mieux utiliser l’espace */
-    max-height: 750px;
-  }
-
-/* Styles des cartes */
-.card {
-  flex: 1;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease-in-out;
-  padding: 15px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card-large {
-  flex: 2;
-}
-
-.card-small {
-  flex: 1;
-  height: auto;
-  min-height: 200px;
-}
-
-/* Espacement interne des cartes */
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Style de l'espace commentaire */
-.comment-box {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  resize: none;
-}
-
-/* Style de l'adresse email */
-.email-info {
-  font-size: 10px;
-  color: #333;
-  text-align: center;
-}
-
-
-
+  /* Conteneur avec défilement */
   .scroll-container {
+    width: 95%;
+    max-width: 1400px;
+    max-height: 750px;
     display: flex;
     gap: 15px;
     align-items: stretch;
     justify-content: center;
-    width: 100%;
     margin: 0 auto;
   }
 
+  /* Styles des cartes */
   .card {
-    padding: 20px;
+    flex: 1;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease-in-out;
-    flex-grow: 1;
+    padding: 15px;
   }
 
+  .card:hover {
+    transform: translateY(-5px);
+  }
 
-.card:hover {
-  transform: translateY(-5px);
+  .card-large {
+    flex: 2;
+  }
+
+  .card-small {
+    flex: 1;
+    height: auto;
+    min-height: 200px;
+  }
+
+  /* Espacement interne des cartes */
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Boîte de commentaire */
+  .comment-box {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+  }
+
+  /* Style de l'adresse email */
+  .email-info {
+    color: #333;
+    text-align: center;
+  }
+
+  /* Disposition des cartes */
+  .card-trajet {
+    flex: 2; 
+    min-width: 300px;
+  }
+
+  .card-commentaire, .card-email {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .side-cards {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+  }
 }
-
-.card-trajet {
-  flex: 2; // Plus grande (2x la taille des autres)
-  min-width: 300px;
-}
-
-
-.card-commentaire, .card-email {
-  flex: 1; // Moitié de la taille de "card-trajet"
-  min-width: 200px;
-}
-
-.side-cards {
-  display: flex;
-  gap: 15px;
-  flex: 1;
-}
-
-.card-email {
-  font-size: 12px; // Réduction de la taille du texte
-}
-
-.card-email .card-body p {
-  font-size: 10px; // Encore plus petit pour les adresses email
-}
-
-.card-commentaire {
-  font-size: 12px; // Réduction de la taille du texte
-}
-
-}
-
-
-// control/ raccourcie @import pour separer les fichier main.scss (a verifier)

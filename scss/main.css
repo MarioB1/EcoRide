@@ -12309,8 +12309,8 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     font-size: 20px;
   }
 }
-.scroll-container {
-  width: 100%;
+.avis-container .scroll-container {
+  width: 100vw;
   max-width: 1200px;
   max-height: 500px;
   margin: 0 auto;
@@ -12320,23 +12320,22 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
 }
-.scroll-container .card {
+.avis-container .scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+.avis-container .scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+.avis-container .scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.avis-container .card {
   width: 100%; /* S’étend sur toute la largeur */
   max-width: none; /* Supprime la restriction */
   min-height: 150px; /* Assurer une hauteur suffisante */
 }
-.scroll-container::-webkit-scrollbar {
-  width: 8px;
-}
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 8px;
-}
-.scroll-container::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-.card {
+.avis-container .card {
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -12344,8 +12343,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease-in-out;
 }
-
-.card:hover {
+.avis-container .card:hover {
   transform: translateY(-5px);
 }
 
@@ -12450,7 +12448,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   padding: 2px 8px;
   white-space: nowrap;
 }
-.trajet-page .trajets-container .scroll-container {
+.trajets-container .scroll-container {
   width: 95%; /* Prend plus de place */
   max-width: 1400px; /* Plus grand pour mieux utiliser l’espace */
   max-height: 750px;
@@ -12489,11 +12487,10 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   resize: none;
 }
 .trajets-container .email-info {
-  font-size: 10px;
   color: #333;
   text-align: center;
 }
-.trajet-page .trajets-container .scroll-container {
+.trajets-container .scroll-container {
   display: flex;
   gap: 15px;
   align-items: stretch;
@@ -12501,7 +12498,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   width: 100%;
   margin: 0 auto;
 }
-.trajet-page .trajets-container .card {
+.trajets-container .card {
   padding: 20px;
   border-radius: 8px;
   background-color: white;
@@ -12509,28 +12506,19 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   transition: transform 0.3s ease-in-out;
   flex-grow: 1;
 }
-.trajet-page .trajets-container .card:hover {
+.trajets-container .card:hover {
   transform: translateY(-5px);
 }
-.trajet-page .trajets-container .card-trajet {
+.trajets-container .card-trajet {
   flex: 2;
   min-width: 300px;
 }
-.trajet-page .trajets-container .card-commentaire, .trajet-page .trajets-container .card-email {
+.trajets-container .card-commentaire, .trajets-container .card-email {
   flex: 1;
   min-width: 200px;
 }
-.trajet-page .trajets-container .side-cards {
+.trajets-container .side-cards {
   display: flex;
   gap: 15px;
   flex: 1;
-}
-.trajet-page .trajets-container .card-email {
-  font-size: 12px;
-}
-.trajet-page .trajets-container .card-email .card-body p {
-  font-size: 10px;
-}
-.trajet-page .trajets-container .card-commentaire {
-  font-size: 12px;
 }/*# sourceMappingURL=main.css.map */
