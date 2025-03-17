@@ -12347,34 +12347,42 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   transform: translateY(-5px);
 }
 
+.vue-container,
 .trajets-container {
-  /* Ligne séparée en 2 avec "Temps de trajet" */
-  /* Première moitié de la ligne */
-  /* Deuxième moitié avec la flèche */
+  /* Conteneur de la carte */
+  /* Détails du trajet */
+  /* Ligne avec durée de trajet */
   /* Flèche à la fin */
-  /* Texte "Temps de trajet" bien centré */
+  /* Durée du trajet centrée */
+  /* Conteneur avec défilement */
   /* Styles des cartes */
   /* Espacement interne des cartes */
-  /* Style de l'espace commentaire */
+  /* Boîte de commentaire */
   /* Style de l'adresse email */
+  /* Disposition des cartes */
 }
+.vue-container .card-body,
 .trajets-container .card-body {
   display: flex;
   align-items: center;
 }
+.vue-container .profile-img,
 .trajets-container .profile-img {
   margin-right: 10px; /* Espacement entre l'image et le texte */
 }
+.vue-container .user-info,
 .trajets-container .user-info {
   display: flex;
   align-items: center;
   gap: 30px; /* Espace entre le pseudo et la note */
 }
+.vue-container .user-rating,
 .trajets-container .user-rating {
   display: flex;
   align-items: center;
   gap: 5px;
 }
+.vue-container .user-rating p,
 .trajets-container .user-rating p {
   margin: 0;
   font-size: 16px;
@@ -12382,12 +12390,14 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   display: flex;
   align-items: center;
 }
+.vue-container .user-rating i,
 .trajets-container .user-rating i {
   font-size: 16px;
   line-height: 1;
   display: flex;
   align-items: center;
 }
+.vue-container .trip-details,
 .trajets-container .trip-details {
   display: flex;
   align-items: center;
@@ -12396,6 +12406,8 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   padding: 20px 0;
   position: relative;
 }
+.vue-container .departure-info p,
+.vue-container .arrival-info p,
 .trajets-container .departure-info p,
 .trajets-container .arrival-info p {
   font-size: 12px;
@@ -12403,12 +12415,15 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   margin: 2px 0;
   line-height: 1.2;
 }
+.vue-container .departure-info,
+.vue-container .arrival-info,
 .trajets-container .departure-info,
 .trajets-container .arrival-info {
   width: 20%;
   text-align: center;
   position: relative;
 }
+.vue-container .route-line,
 .trajets-container .route-line {
   position: relative;
   width: 60%;
@@ -12417,12 +12432,14 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   align-items: center;
   justify-content: space-between;
 }
+.vue-container .route-line::before,
 .trajets-container .route-line::before {
   content: "";
-  width: calc(50% - 40px); /* Ajuste pour le texte centré */
+  width: calc(50% - 40px); /* Ajuste pour centrer le texte */
   height: 2px;
   background-color: #333;
 }
+.vue-container .route-line::after,
 .trajets-container .route-line::after {
   content: "";
   width: calc(50% - 40px);
@@ -12430,6 +12447,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   background-color: #333;
   position: relative;
 }
+.vue-container .arrival-info::before,
 .trajets-container .arrival-info::before {
   content: "";
   position: absolute;
@@ -12440,6 +12458,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
+.vue-container .route-line span,
 .trajets-container .route-line span {
   font-size: 12px;
   font-weight: bold;
@@ -12448,11 +12467,18 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   padding: 2px 8px;
   white-space: nowrap;
 }
+.vue-container .scroll-container,
 .trajets-container .scroll-container {
-  width: 95%; /* Prend plus de place */
-  max-width: 1400px; /* Plus grand pour mieux utiliser l’espace */
+  width: 95%;
+  max-width: 1400px;
   max-height: 750px;
+  display: flex;
+  gap: 15px;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0 auto;
 }
+.vue-container .card,
 .trajets-container .card {
   flex: 1;
   border: 1px solid #ddd;
@@ -12462,22 +12488,27 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   transition: transform 0.3s ease-in-out;
   padding: 15px;
 }
+.vue-container .card:hover,
 .trajets-container .card:hover {
   transform: translateY(-5px);
 }
+.vue-container .card-large,
 .trajets-container .card-large {
   flex: 2;
 }
+.vue-container .card-small,
 .trajets-container .card-small {
   flex: 1;
   height: auto;
   min-height: 200px;
 }
+.vue-container .card-body,
 .trajets-container .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.vue-container .comment-box,
 .trajets-container .comment-box {
   width: 100%;
   height: 100px;
@@ -12486,37 +12517,23 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
   border-radius: 5px;
   resize: none;
 }
+.vue-container .email-info,
 .trajets-container .email-info {
   color: #333;
   text-align: center;
 }
-.trajets-container .scroll-container {
-  display: flex;
-  gap: 15px;
-  align-items: stretch;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-}
-.trajets-container .card {
-  padding: 20px;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  flex-grow: 1;
-}
-.trajets-container .card:hover {
-  transform: translateY(-5px);
-}
+.vue-container .card-trajet,
 .trajets-container .card-trajet {
   flex: 2;
   min-width: 300px;
 }
-.trajets-container .card-commentaire, .trajets-container .card-email {
+.vue-container .card-commentaire, .vue-container .card-email,
+.trajets-container .card-commentaire,
+.trajets-container .card-email {
   flex: 1;
   min-width: 200px;
 }
+.vue-container .side-cards,
 .trajets-container .side-cards {
   display: flex;
   gap: 15px;

@@ -3,10 +3,94 @@
   <div class="trajet mt-5">
 
 
- <header>
-                <h4>Date</h4>
-                <h4>Nombre de passager</h4>
-            </header>
+    <header class="trajet-header">
+      <h3 class="text-secondary"><strong>Date</strong></h3>
+      <h3 class="text-secondary"><strong>Nombre de passager</strong></h3>
+                </header>
+    <br><br>
+    <div class="filter-container">
+      <div class="filter-header">
+        <h4 class="text-secondary">Trié par</h4>
+        <a href="#" class="clear-filters">Tout effacer</a>
+      </div>
+      <br>
+      <div class="filter-option">
+          <input type="radio" id="depart-tot" name="sort" checked>
+          <label for="voiture-verte">
+              <span class="radio-icon"></span> Voiture verte 
+          </label>
+      </div>
+  
+      <div class="filter-option">
+          <input type="radio" id="prix-bas" name="sort">
+          <label for="trajet-court">
+              <span class="radio-icon"></span> Trajet le plus court
+          </label>
+      </div>
+  
+      <div class="filter-option">
+          <input type="radio" id="proche-depart" name="sort">
+          <label for="meilleure-note">
+              <span class="radio-icon"></span> Meilleure note
+          </label>
+      </div>
+  
+      <div class="filter-option">
+          <input type="radio" id="proche-arrivee" name="sort">
+          <label for="prix-croissant">
+              <span class="radio-icon"></span> Prix croissant
+          </label>
+      </div>
+  <br><br>
+      <div class="filter-header">
+        <h4 class="text-secondary">Mes préférences</h4>
+        <a href="#" class="clear-filters">Tout effacer</a>
+      </div>
+<br>
+      <div class="filter-option">
+          <input type="radio" id="depart-tot" name="sort" checked>
+          <label for="accepte-animaux">
+              <span class="radio-icon"></span> Animaux acceptés 
+          </label>
+      </div>
+  
+      <div class="filter-option">
+          <input type="radio" id="prix-bas" name="sort">
+          <label for="prise-electrique">
+              <span class="radio-icon"></span> Prises éléctriques
+          </label>
+      </div>
+  
+      <div class="filter-option">
+          <input type="radio" id="proche-depart" name="sort">
+          <label for="cigarette-autorisees">
+              <span class="radio-icon"></span> Cigarettes autorisées
+          </label>
+      </div>
+  
+      <div class="filter-option">
+          <input type="radio" id="proche-arrivee" name="sort">
+          <label for="climatisation">
+              <span class="radio-icon"></span> Climatisation
+          </label>
+      </div>
+
+      
+      <div class="filter-option">
+        <input type="radio" id="proche-arrivee" name="sort">
+        <label for="siege-inclinable">
+            <span class="radio-icon"></span> Siège inclinable
+        </label>
+    </div>
+  </div>
+  
+</div></div>
+
+
+
+
+<a href="/selection" class="vue-container">
+  <div class="scroll-container">
   <br>  <br>
   <div class="col">
     <div class="scroll-container d-flex gap-3">
@@ -24,7 +108,7 @@
         </div>
   
             <!-- Carte Trajet (plus large) -->
-            <div class="card card-trajet">
+            <div  href="/selection" class="card card-trajet">
               <div class="card-header d-flex">
                 <div class="trip-details">
                   <div class="departure-info">
@@ -52,33 +136,5 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          
-            <!-- Conteneur des cartes Commentaire et Email -->
-            <div class="side-cards">
-              
-              <!-- Carte Commentaire -->
-              <div class="card card-commentaire">
-                <div class="card-header">
-                  <strong>Commentaire</strong>
-                </div>
-                <div class="card-body">
-                  <textarea class="form-control" rows="5" placeholder="Ajouter un commentaire..."></textarea>
-                </div>
-              </div>
-          
-              <!-- Carte Emails -->
-              <div class="card card-email">
-                <div class="card-header">
-                  <strong>Contacts</strong>
-                </div>
-                <div class="card-body">
-                  <p><strong>Conducteur :</strong> conducteur@email.com</p>
-                  <p><strong>Passager :</strong> passager@email.com</p>
-                </div>
-              </div>
-            </div>
-          
-          </div>
-  </div></div></section>
+              </div></div></div></div></div></a>
+</section>
