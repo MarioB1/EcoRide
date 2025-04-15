@@ -1,0 +1,88 @@
+<section class="ajouter"  style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f8f9fa; padding: 20px;">
+    <article>
+            <div class="container">
+                <div class="col">
+                    <div class="container mt-5">
+                        <div class="card mx-auto" style="max-width: 500px;">
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-primary fw-bold custom-title">
+                                    Enregistrer votre véhicule
+                                </h5>
+                                <br>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="PlaqueInput" class="form-label">Plaque d'immatriculation</label>
+                                        <input type="text" class="form-control" id="PlaqueInput"
+                                            placeholder="Ex: AB-123-CD" name="Plaque" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez entrer une plaque d'immatriculation valide.
+                                        </div>
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <label for="DateImmatInput" class="form-label">Date de la première immatriculation</label>
+                                        <input type="date" class="form-control" id="DateImmatInput" name="DateImmat" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez entrer une date valide.
+                                        </div>
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <label for="MarqueInput" class="form-label">Marque du véhicule</label>
+                                        <input type="text" class="form-control" id="MarqueInput"
+                                            placeholder="Ex: Renault, Peugeot..." name="Marque" required>
+                                        <div class="invalid-feedback">
+                                            La marque est requise.
+                                        </div>
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <label for="ModeleInput" class="form-label">Modèle du véhicule</label>
+                                        <input type="text" class="form-control" id="ModeleInput"
+                                            placeholder="Ex: Clio, 308..." name="Modele" required>
+                                        <div class="invalid-feedback">
+                                            Le modèle est requis.
+                                        </div>
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <label for="CouleurInput" class="form-label">Couleur du véhicule</label>
+                                        <input type="text" class="form-control" id="CouleurInput"
+                                            placeholder="Ex: Rouge, Bleu, Noir..." name="Couleur" required>
+                                        <div class="invalid-feedback">
+                                            La couleur est requise.
+                                        </div>
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <label for="PlacesInput" class="form-label">Nombre de places disponibles</label>
+                                        <input type="number" class="form-control" id="PlacesInput" name="Places"
+                                            placeholder="Ex: 3" min="1" max="7" required>
+                                        <div class="invalid-feedback">
+                                            Veuillez indiquer un nombre valide de places.
+                                        </div>
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <label for="PreferencesInput" class="form-label">Préférences du conducteur</label>
+                                        <textarea class="form-control" id="PreferencesInput" name="Preferences"
+                                            rows="3" placeholder="Ex: Pas d'animaux, musique autorisée, climatisation..."></textarea>
+                                        <div class="invalid-feedback">
+                                            Ce champ est facultatif.
+                                        </div>
+                                    </div>
+    
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary w-100">
+                                            Enregistrer
+                                        </button>
+                                    </div>
+                                </form>
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+            </div> 
+        </article>
+    </section>
+    

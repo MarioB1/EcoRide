@@ -6,6 +6,9 @@ export const allRoutes = [
     new Route("/covoiturage", "Covoiturage", "/pages/covoiturage.html",[]),
     new Route("/vuecovoit", "Vue", "/pages/vuecovoit.html",[]),
     new Route("/selection", "Selection", "/pages/selection.html",[]),
+    new Route("/montrajet", "Mon Trajet", "/pages/montrajet.html",[],"/js/auth/signin.js"),
+    new Route("/signaler", "Signaler", "/pages/signaler.html",[]),
+    new Route("/laisseravis", "Laisser avis", "/pages/laisseravis.html",[]),
     new Route("/contact", "Contact", "/pages/contact.html",[]),
     new Route("/avis", "Avis", "/pages/avis.html",[]),
     new Route("/trajets", "Trajets", "/pages/trajets.html",[]),
@@ -14,6 +17,10 @@ export const allRoutes = [
     new Route("/signin", "Connexion", "/pages/auth/signin.html", [],"/js/auth/signin.js"),
     new Route("/signup", "Inscription", "/pages/auth/signup.html", [], "/js/auth/signup.js"),
     new Route("/account", "Mon compte", "/pages/auth/account.html", []),
+    new Route("/historique", "Mes voyages", "/pages/historique.html", []),
+    new Route("/encours", "Trajet en cours", "/pages/encours.html", []),
+    new Route("/ajouter", "Ajouter un véhicule", "/pages/ajouter.html", []),
+
 
 
 ];

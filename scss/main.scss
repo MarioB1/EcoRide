@@ -235,133 +235,80 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     font-size: 12px;  /* Réduire légèrement la taille du texte sur les petits écrans */
   }
 }
-
 /* Page de profil - Styles spécifiques */
-.profile-page {
-  padding: 20px;
+/* Page de profil - Styles spécifiques */
+.account {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 100vh; /* Hauteur totale de la vue */
+  width: 100%;
 }
 
+/* Conteneur des cartes Profil et Pseudo */
 .profile-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  gap: 40px; /* Espacement entre les cartes */
+  width: 100%;
+  max-width: 900px; /* Évite l'étalement */
+  min-width: 600px; /* Évite que ça devienne trop étroit */
+  flex-wrap: nowrap; /* Garde les cartes côte à côte */
+  margin: auto; /* Centre complètement */
+  position: relative; /* Permet un bon centrage */
 }
 
-.profile-card {
+/* Styles des cartes */
+.profile-card, 
+.pseudo-card {
   padding: 20px;
-  margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  max-width: 500px;
-}
-
-.profile-card .card-body {
-  padding: 20px;
-}
-
-.profile-card .form-control {
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.profile-card button {
+  max-width: 450px;
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 16px;
+  flex-shrink: 0; /* Empêche le redimensionnement inattendu */
+  background: white;
 }
 
-.profile-card .btn-danger {
-  background-color: #f44336;
-  border: none;
-  color: white;
-}
-
-.profile-card .btn-danger:hover {
-  background-color: #e53935;
-}
-
-/* Image de profil et pseudo alignés */
-.profile-card .d-flex-profile {
+/* Conteneur des boutons sous les cartes */
+.profile-actions {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.profile-card .profile-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.profile-card .profile-img img {
+  flex-direction: column;
+  align-items: center; /* Centre parfaitement */
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin-top: 40px; /* Ajoute un espace sous les cartes */
+  text-align: center; /* Centre le texte et les boutons */
 }
 
-.profile-card .stars i {
-  color: gold;
-  margin-right: 3px;
+/* Styles des boutons */
+.profile-actions .text-center {
+  max-width: 500px;
+  width: 100%;
 }
 
-/* Styles du formulaire */
-.profile-card .form-control {
+.profile-actions button {
+  width: 250px; /* Taille uniforme */
+  margin: 10px; /* Espacement */
+}
+
+.profile-actions a {
+  display: block;
+  margin-top: 10px;
   font-size: 14px;
-  padding: 10px;
 }
 
-/* Préférences */
-.profile-card #preferences i {
-  font-size: 25px;
-  margin-right: 10px;
-}
-
-.profile-card #preferences i:hover {
-  color: #014421; /* Si tu veux avoir un effet au survol */
-}
-
-/* Responsive adjustments */
+/* Responsive : Alignement en colonne sur petits écrans */
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column;
-    align-items: stretch;
+    gap: 20px;
+    min-width: auto; /* Permet un bon ajustement */
   }
+}
 
-  .profile-card {
-    width: 100%;
-  }
 
-  .profile-card .profile-img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .profile-card .d-flex-profile {
-    justify-content: center;
-  }
-
-  .profile-card .stars {
-    margin-top: 5px;
-  }
-
-  .profile-card .form-control {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .profile-card textarea.form-control {
-    font-size: 14px;
-  }
-
-  .profile-card #preferences i {
-    font-size: 20px;
-  }
-} 
- // fin de la page mon compte
 
  // debut page avis
 .avis-container {
@@ -412,10 +359,10 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
 }
   
  // debut page trajet
+ .montrajet,
+ .selection,
   .vue-container, 
 .trajets-container {
-
-
   /* Conteneur de la carte */
   .card-body {
     display: flex;
@@ -604,28 +551,24 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
 }
 
 .vue-container {
-.trajet-header {
-  display: flex;
-  justify-content: flex-end; /* Aligner à droite */
-  gap: 40px; /* Espacement entre les éléments */
-  text-align: right;
-  width: 100%;
-  padding-right: 20px; /* Décale légèrement à droite si besoin */
-}
-
 /* Scroll Container (Liste des trajets) */
 .scroll-container {
-  max-height: 500px;
+  margin: 20px; // Ajoute une marge pour mieux espacer du reste
+  padding: 20px; // Augmente l'espace intérieur
+  max-height: 400px;
   overflow-y: auto;
-  background: #0000;
+  background: #fff;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.trajet-mt-5 {
+  margin: 50px;
+}
+
 /* Trier par */
 .filter-container {
-  background: white;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -634,13 +577,18 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
 
 /* Conteneur principal */
 .filter-container {
-  background-color: #f8fafa;
+  margin: 50px;
   padding: 20px;
   border-radius: 10px;
   width: 300px;
   font-family: Arial, sans-serif;
 }
 
+
+.card-trajet {
+  margin: 20px; // Ajoute de l'espace autour de chaque carte trajet
+  padding: 15px;
+}
 /* Titre et lien "Tout effacer" */
 .filter-header {
     display: flex;
@@ -649,6 +597,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
     font-size: 16px;
 }
 
+
 .filter-header h3 {
   margin: 0;
   font-size: 18px;
@@ -656,12 +605,11 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
 }
 
 .clear-filters {
-  color: #009ee2;
+  color: #046132;
   text-decoration: none;
   font-size: 14px;
 }
 
-/* Options de tri */
 .filter-option {
   display: flex;
   align-items: center;
@@ -686,7 +634,7 @@ section .container .row.row-cols-1.row-cols-lg-3 .col img {
 .radio-icon {
   width: 18px;
   height: 18px;
-  border: 2px solid #009ee2;
+  border: 2px solid #046132;
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -697,7 +645,7 @@ input:checked + label .radio-icon::after {
   content: "";
   width: 10px;
   height: 10px;
-  background: #009ee2;
+  background: #046132;
   border-radius: 50%;
   position: absolute;
   top: 3px;
@@ -715,9 +663,346 @@ label {
   cursor: pointer;
 }
 
-
-
 .vue-container {
-  width: 60%; /* Occupe 60% de la largeur de l'écran */
-  margin: auto; /* Centre le conteneur */
+ display: grid;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
 }}
+
+.selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 40px;
+
+  .selection-trajet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; // Augmente la largeur pour un rendu plus aéré
+    gap: 30px;
+  }
+
+  .trajet-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .trajet,
+  .profile-card {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .card-header {
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px;
+  }
+
+  .card-avis,
+  .card-recap {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .btn-primary {
+    background: #014421;
+    border: none;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: #014421;
+    }
+  }
+}
+
+
+
+.montrajet {
+
+  .montrajet {
+    padding-left: 250px; /* Augmenté pour décaler toute la section encore plus à droite */
+  }
+  
+  .card-card-trajet {
+    margin-left: 100px; /* Ajouté pour encore plus de décalage */
+    transform: translateX(200px); /* Augmenté pour plus de déplacement */
+ 
+  }
+  .card-trajet {
+    width: 100vw !important; /* Prend toute la largeur de l'écran */
+    max-width: 700px !important; /* Augmenter la largeur maximale */
+    margin-left: -30px; /* Ajuster légèrement à gauche si besoin */
+  }
+  
+  .trajet {
+    margin-left: 250px; /* Encore plus de décalage vers la droite */
+  }
+  
+  .card-body {
+    display: flex;
+  }
+
+  
+  .profile-img {
+    margin-right: 10px; /* Espacement entre l'image et le texte */
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espace entre le pseudo et la note */
+  }
+
+  .user-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+  }
+
+  .user-rating p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .user-rating i {
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Détails du trajet */
+  .trip-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+  }
+
+  .departure-info p,
+  .arrival-info p {
+    font-size: 12px;
+    color: #555;
+    margin: 2px 0;
+    line-height: 1.2;
+  }
+
+  .departure-info,
+  .arrival-info {
+    width: 20%;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Ligne avec durée de trajet */
+  .route-line {
+    position: relative;
+    width: 60%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .route-line::before {
+    content: '';
+    width: calc(50% - 40px); /* Ajuste pour centrer le texte */
+    height: 2px;
+    background-color: #333;
+  }
+
+  .route-line::after {
+    content: '';
+    width: calc(50% - 40px);
+    height: 2px;
+    background-color: #333;
+    position: relative;
+  }
+
+  /* Flèche à la fin */
+  .arrival-info::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border-left: 10px solid #333;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+
+  /* Durée du trajet centrée */
+  .route-line span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    background-color: white;
+    padding: 2px 8px;
+    white-space: nowrap;
+  }
+
+  .vue-container {
+    display: grid;
+     gap: 20px;
+     max-width: 1000px;
+     margin: auto;
+     padding: 20px;}
+
+     .btn-pb{
+      background-color : #fff;
+      color: #014421 !important;
+      border: 1px solid #014421;
+    }
+    .btn-termine {
+      position: absolute;
+      top: 50%;  /* Centre verticalement */
+      right: 200px; /* Ajuste la distance depuis le bord droit */
+      transform: translateY(-50%); /* Corrige le centrage vertical */
+      background-color : #014421;
+      color: #fff;
+    }
+
+     }
+    
+     .historique {
+.scroll-container {
+  margin: 20px; /* Ajoute une marge pour espacer */
+  padding: 15px; /* Ajoute un espace intérieur */
+  max-height: 400px;
+  overflow-y: auto; /* Active le scroll vertical */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Organise les cartes en colonne */
+  align-items: center; /* Centre les cartes */
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+.card-trajet {
+  width: 90%; /* Ajuste la largeur pour éviter le débordement */
+  max-width: 700px;
+  margin: 0 auto; /* Centre la carte */
+  min-width: 600px;
+}
+
+.trajet {
+  margin-left: 250px; /* Décalage vers la droite */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Espacement entre pseudo et note */
+}
+
+.user-rating p,
+.user-rating i {
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Détails du trajet */
+.trip-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.departure-info p,
+.arrival-info p {
+  font-size: 12px;
+  color: #555;
+  margin: 2px 0;
+}
+
+.departure-info,
+.arrival-info {
+  width: 20%;
+  text-align: center;
+}
+
+/* Ligne avec durée de trajet */
+.route-line {
+  width: 60%;
+  height: 2px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-line span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  background-color: white;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+     }
+
+  
+    

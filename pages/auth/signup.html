@@ -16,11 +16,11 @@
                                 <h5 class="card-title text-center text-primary fw-bold custom-title">Connexion</h5>
                                 <br>
                                 <div class="container">
-                                    <form>
+                                    <form id="formulaireInscription">
                                         <div class="mb-3">
                                             <label for="NomInput" class="form-label">Nom</label>
                                             <input type="text" class="form-control" id="NomInput"
-                                                placeholder="Votre nom" name="Nom">
+                                                placeholder="Votre nom" name="nom">
                                                 <div class="invalid-feedback">
                                                     Le Nom est requis
                                                   </div>
@@ -28,7 +28,7 @@
                                         <div class="mb-3">
                                             <label for="PrenomInput" class="form-label">Prénom</label>
                                             <input type="text" class="form-control" id="PrenomInput"
-                                                placeholder="Votre prénom" name="Prenom">
+                                                placeholder="Votre prénom" name="prenom">
                                                 <div class="invalid-feedback">
                                                     Le prénom est requis
                                                   </div>
@@ -44,7 +44,7 @@
                                         <div class="mb-3">
                                             <label for="PasswordInput" class="form-label">Mot de passe</label>
                                             <input type="password" class="form-control" id="PasswordInput"
-                                                placeholder="mot de passe" name="Password">
+                                                placeholder="mot de passe" name="mdp">
                                             <div class="invalid-feedback">
                                                 Le mot de passe choisit ne semble pas assez robuste, il doit comprendre
                                                 : Au moins 8 caractères, comprenant au moins une lettre majuscule, 1
@@ -64,8 +64,8 @@
                                                 </div>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-primary w-100"
-                                                id="btn-validation-inscription">S'inscrire</button>
+                                            <button type="button" class="btn btn-primary w-100"
+                                                id="btn-validation-inscription" disabled="true">S'inscrire</button>
                                         </div>
                                 </div>
                             </div>

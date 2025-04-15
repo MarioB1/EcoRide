@@ -1,16 +1,16 @@
 
 <section class="vue-container" style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #0000;">
+  
   <div class="trajet mt-5">
-
-
-    <header class="trajet-header">
-      <h3 class="text-secondary"><strong>Date</strong></h3>
-      <h3 class="text-secondary"><strong>Nombre de passager</strong></h3>
+ <header class="trajet-header">
+      <h4 class="text-secondary"><strong>Date</strong></h4>
+      <h4 class="text-secondary"><strong>Nombre de passager</strong></h4>
                 </header>
-    <br><br>
+<br>
+
     <div class="filter-container">
       <div class="filter-header">
-        <h4 class="text-secondary">Trié par</h4>
+                <h6 class="text-secondary"><strong>Trié par</strong></h6>
         <a href="#" class="clear-filters">Tout effacer</a>
       </div>
       <br>
@@ -36,14 +36,16 @@
       </div>
   
       <div class="filter-option">
-          <input type="radio" id="proche-arrivee" name="sort">
+          <input type="radio" id="proche-arrivee" name="sort" >
           <label for="prix-croissant">
               <span class="radio-icon"></span> Prix croissant
           </label>
       </div>
+
   <br><br>
+
       <div class="filter-header">
-        <h4 class="text-secondary">Mes préférences</h4>
+        <h6 class="text-secondary"><strong>Mes préférences</strong></h6>
         <a href="#" class="clear-filters">Tout effacer</a>
       </div>
 <br>
@@ -88,27 +90,12 @@
 
 
 
-
-<a href="/selection" class="vue-container">
+<div class="col-md"> 
   <div class="scroll-container">
-  <br>  <br>
   <div class="col">
-    <div class="scroll-container d-flex gap-3">
-            <div class="action-image-buttons" data-show="employe">
-
-      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeleteAvisModal"><i class="bi bi-trash"></i></button>
-      </div>
-
-
-      
-        <div class="action-image-buttons" data-show="employe">
-          <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeleteAvisModal">
-            <i class="bi bi-trash"></i>
-          </button>
-        </div>
   
             <!-- Carte Trajet (plus large) -->
-            <div  href="/selection" class="card card-trajet">
+            <a href="/selection" class="card card-trajet">
               <div class="card-header d-flex">
                 <div class="trip-details">
                   <div class="departure-info">
