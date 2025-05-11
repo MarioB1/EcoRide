@@ -91,28 +91,51 @@ function validateRequired(input) {
     }
 }
 
-function signup () {
 
-fetch('http://localhost:8000/api/registration', {
-    method: 'POST', 
-    headers: {'Content-Type': 'application/json',},
-    body: JSON.stringify({ 
-        firstName: 'nom',
-        lastName: 'prenom',
-        email: 'test@email.com',
-        password: 'Test65!!'
-    }),
+    function InscrireUtilisateur () {
+
+let dataForm = new FormData(formInscription);
+
+let myHeaders = new Headers();
+
+myHeaders.append("Content-Type", "application/json");
+
+
+let raw = JSON.stringify({
+    "firstName": dataForm.get("nom"),
+    "lastName": dataForm.get("prenom"),
+    "email": dataForm.get("email"),
+    "password": dataForm.get("mdp")
+});
+
+let requestOptions = {
+    method: 'POST',
+
+    headers: myHeaders,
+
+    body: raw,
+
+    redirect: 'follow'
+};
+
+fetch(apiUrl+"registration", requestOptions)
+.then(response => {
+    if(response.ok){
+        return response.json();
+    }
+    else{
+        alert("Erreur lors de l'inscription");
+    }
 })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erreur HTTP : ' + response.status);
-        }
-        return response.json(); // Convertit la réponse en JSON
-    })
-    .then(data => {
-        console.log(data); // Utilisez les données récupérées ici
-    })
-    .catch(error => {
-        console.error('Erreur :', error);
-    });
-}
+.then(result => {
+    showSafeSuccessMessage(dataForm.get("prenom"));
+    document.location.href = "/signin";
+})
+.catch(error => console.log('error', error));
+    }
+
+    function showSafeSuccessMessage(prenom) {
+        const safePrenom = sanitizeHtml(prenom); // Fonction depuis script.js
+        alert("Bravo " + safePrenom + ", vous êtes maintenant inscrit, vous pouvez vous connecter.");
+    }
+    
